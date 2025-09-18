@@ -35,7 +35,7 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
     - name: Compile code
-      run: g++ -Wall -g -o palindrome_test palindrome.c palindrome_test.cpp -I"~/include" -L"~/lib" -lgtest -pthread -std=c++0x
+      run: g++ -Wall -g -o palindrome_test palindrome.c palindrome_test.cpp -I"~/include" -L"~/lib" -lgtest -pthread -std=c++14
       working-directory: palindrome
     - name: Run test
       run: valgrind -v --leak-check=full --show-leak-kinds=all --error-exitcode=1 ./palindrome_test

@@ -31,7 +31,7 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
     - name: Compile code
-      run: g++ -Wall -g -o disemvowel_test disemvowel.c disemvowel_test.cpp -I"~/include" -L"~/lib" -lgtest -pthread -std=c++0x
+      run: g++ -Wall -g -o disemvowel_test disemvowel.c disemvowel_test.cpp -I"~/include" -L"~/lib" -lgtest -pthread -std=c++14
       working-directory: disemvowel
     - name: Run test
       run: valgrind -v --leak-check=full --show-leak-kinds=all --error-exitcode=1 ./disemvowel_test
