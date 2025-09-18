@@ -33,7 +33,7 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
     - name: Compile test code
-      run: g++ -Wall -g -o palindrome_test palindrome.c palindrome_test.cpp -I"~/include" -L"~/lib" -lgtest -pthread -std=c++0x
+      run: g++ -Wall -g -o palindrome_test palindrome.c palindrome_test.cpp -I"~/include" -L"~/lib" -lgtest -pthread -std=c++14
       working-directory: palindrome
     - name: Run test
       run: ./palindrome_test
