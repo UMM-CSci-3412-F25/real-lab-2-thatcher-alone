@@ -14,6 +14,7 @@ int main(int argc, char *argv[]) {
     char* result = disemvowel(line);
     printf("%s", result);
     free(result);
+    result = NULL;
   }
 
   free(line);

@@ -57,6 +57,7 @@ TEST(Disemvowel, HandleLongString) {
 
   free(str);
   free((void*) result);
+  str=NULL;
   result=NULL;
 }
 
